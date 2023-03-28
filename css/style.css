@@ -45,10 +45,9 @@
     background-image: url(/images/kyoto.png);
         width: 200px;
         height: 200px;
-        object-fit: fill;
         background-position: center center;
         background-repeat: no-repeat;
-        background-size: cover;
+
 }
 
 .osaka{
