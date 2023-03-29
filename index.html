@@ -7,6 +7,8 @@
     <title>Welcome to Japan</title>
 
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/37042e553e.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="css/style.css">
     <script src="path/to/jquery.min.js"></script>
     <script src="path/to/popper.min.js"></script>
@@ -17,15 +19,21 @@
 </head>
 <body>
 
-<!-- Where nav Bar Starts -->
+<!-- Nav Bar Starts -->
       <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
         <div class="container-fluid">
 
+          <a class="navbar-brand" href="#">
+            <i class="fa-solid fa-torii-gate" style="color: #ff0000;margin:10px ;"></i>
+            JAPAN
+          </a>
+          
+
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
           </button>
 
-          <a class="navbar-brand" href="#">JAPAN</a>
+          
 
           <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-body">
@@ -48,18 +56,20 @@
 
         </div>
       </nav>
- <!-- Nav Bar ends -->
+<!-- Nav Bar Ends -->
 
-
- <div id="carouselExampleIndicators" class="carousel slide">
+<!-- Where Carousel Starts -->
+ <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
-  <div class="carousel-inner">
+  <div class="carousel-inner" style=" position: relative;">
+    
     <div class="carousel-item active">
-      <div class="tokyo"></div>
+      <div class="tokyo d-flex justify-content-center text-align-center align-items-center">
+      </div>
     </div>
     <div class="carousel-item">
       <div class="kyoto"></div>
@@ -77,12 +87,16 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-   
-    
-    hsahdahh
-    <div class="trydiv">
-      try
 
+
+<div class="banner-txt-div">
+  <p class="banner-welcome-txt">Welcome to</p>
+  <h1 class="banner-place-txt">TOKYO</h1>
+<p class="banner-tagline-txt">Discover the beauty of Japan</p>
+<button class="banner-button-explore">EXPLORE NOW</button>
 </div>
+<!-- Carousel Ends -->
+
+   
 </body>
 </html>

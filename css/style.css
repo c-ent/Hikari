@@ -19,10 +19,11 @@
 
 .navbar-toggler {
     border: none !important;
-    box-shadow: none !important
-
+    box-shadow: none !important;
    ;
 }
+
+
 
 .carousel,.carousel-inner{
     height: 100vh !important;
@@ -50,13 +51,75 @@
 }
 
 
-.trydiv{
-    width: 200px;
-    height: 200px;
-    object-fit: fill;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-image: url(../images/tokyo.png);
+.banner-txt-div{
+position: absolute; 
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+
+justify-content: center;
+text-align: center;
 }
+
+@font-face {
+    font-family: Inter;
+    src: url('../fonts/Inter/Inter-VariableFont_slnt\,wght.ttf');
+}
+p,h1{
+    margin: 0;
+    padding: 0;
+}
+.banner-welcome-txt,.banner-place-txt,.banner-tagline-txt{
+    color: #fff;
+    font-family: Inter;
+}
+
+.banner-welcome-txt{
+    font-size: 1.5rem;
+    height: 15px;
+
+
+}
+
+
+.banner-place-txt{
+    font-size: 9rem !important;
+    font-weight: 700;
+    height: 150px;
+}
+
+.banner-tagline-txt{
+    font-size: 1rem;;
+    font-weight: 400;
+
+}
+
+
+.banner-button-explore{
+    background-color: red;
+    color: white;
+    border-radius: 50px;
+    border: none;
+    width: 250px;
+    height: 40px;
+
+}
+.banner-button-explore:hover{
+    background-color: rgba(0, 0, 0, 0);
+    border-style:solid ;
+    border-width: 1px;
+    border-color:white ;
+   
+    
+
+}
+
+@media screen and (max-width: 768px) {
+    .banner-place-txt{
+        font-size: 6rem !important;
+        height: 100px;
+    }
+}
+    
+
 
