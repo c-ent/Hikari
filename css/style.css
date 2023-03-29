@@ -75,7 +75,8 @@ p,h1{
 
 .banner-welcome-txt{
     font-size: 1.5rem;
-    margin-bottom: 150px;
+    margin-bottom: 150px;  
+    /* I added a margin-bottom so that the "TOKYO" place will be showed */
     
 }
 
@@ -84,6 +85,7 @@ p,h1{
     font-size: 9rem !important;
     font-weight: 700;
     height: 200px;
+    /* Also change the height here to adjust the view of the "TOKYO" places */
 
 }
 
@@ -117,11 +119,13 @@ p,h1{
     .banner-place-txt{
         font-size: 5rem !important;
         height: 120px;
+         /* Also change the height here to adjust the view of the "TOKYO" places */
     }
 
     
 .banner-welcome-txt{
     margin-bottom: 90px;
+     /* I added a margin-bottom so that the "TOKYO" place will be showed */
 }
 
 
