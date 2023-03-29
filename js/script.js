@@ -1,13 +1,15 @@
 document.addEventListener('slide.bs.carousel', function(event){
     var activeSlide = event.to;
-
-    if (activeSlide == 0) { 
-        document.getElementById("place").textContent = 'TOKYO';
-    }
-    if (activeSlide == 1) { 
-        document.getElementById("place").textContent = 'KYOTO';
-    }
-    if (activeSlide == 2) {
-        document.getElementById("place").textContent = 'OSAKA';
-    }
+switch (activeSlide) {
+    case 0:
+    document.getElementById("place").textContent = 'TOKYO';
+    break;
+    case 1:
+    document.getElementById("place").textContent = 'KYOTO';
+    break;
+    case 2:
+    document.getElementById("place").textContent = 'OSAKA';
+    break;
+  }
 });
+
