@@ -1,33 +1,4 @@
-.offcanvas{
-    --bs-offcanvas-width: min(300px) !important;
-    --bs-offcanvas-bg: rgba(0, 0, 0, 0.54) !important;
-}
 
-.nav-link{
-    color: #fff !important;
-}
-
-.navbar{
-    background-color:  rgba(0, 0, 0, 0.54) !important;
-   
-}
-
-.navbar-brand{
-    color: #fff !important;
-}
-
-
-.navbar-toggler {
-    border: none !important;
-    box-shadow: none !important;
-   ;
-}
-
-
-
-.carousel,.carousel-inner{
-    height: 100vh !important;
-}
 
 .tokyo,.kyoto,.osaka{
         width: 100%;
@@ -108,7 +79,6 @@ p,h1{
     border-color:white ;
    
 }
-
 
 
 @media screen and (max-width: 768px) {
