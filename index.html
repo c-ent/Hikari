@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/custombootstrap.css">
-    
+
     <script src="js/script.js"></script>
     <!-- <script src="path/to/jquery.min.js"></script>
     <script src="path/to/popper.min.js"></script> -->
@@ -22,91 +22,160 @@
 </head>
 <body>
 
-<!-- Nav Bar Starts -->
-      <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
-        <div class="container-fluid">
+<div class="">
+<!-- Loading Start -->
+<div class="loading-area"id="loading">
+  <img class="loading-img"src="/src/img/loading.gif">  Loading
+</div>
+<!--Loading End -->
 
+      <!-- Header -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div class="container">
           <a class="navbar-brand" href="#">
             <i class="fa-solid fa-torii-gate" style="color: #ff0000;margin:10px ;"></i>
             JAPAN
           </a>
-          
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
           </button>
-
           <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-body">
               <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">About Us</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Gallery</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Reviews</a>
-                </li>
+                <li class="nav-item"> <a class="nav-link active" aria-current="page" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Reviews</a></li>
               </ul>
             </div>
           </div>
-
         </div>
       </nav>
-<!-- Nav Bar Ends -->
+    <!-- Header Ends -->
 
-<!-- Where Carousel Starts -->
- <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner" style=" position: relative;">
-    
+      <!-- Carousel Start-->
+      <div id="bannercarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#bannercarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#bannercarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#bannercarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+            <div class="carousel-inner" style=" position: relative;">
+              <div class="carousel-item active">
+                <div class="tokyo d-flex justify-content-center text-align-center align-items-center"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="kyoto d-flex justify-content-center text-align-center align-items-center"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="osaka d-flex justify-content-center text-align-center align-items-center"></div>
+              </div>
+            </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#bannercarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#bannercarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+        </div>
+              <!-- Banner Texts -->
+              <div class="banner-txt-div">
+                <p class="banner-welcome-txt">Welcome to</p>
+                <h1 class="banner-place-txt" id="place">TOKYO</h1>
+                <p class="banner-tagline-txt">Discover the beauty of Japan</p>
+                <button class="banner-button-explore">EXPLORE NOW</button>
+              </div>
+        <!-- Carousel Ends -->
+
+
+
+<!-- Discover/About Us Area -->
+      <div class="discover-area container">
+        <div>
+          <p>01</p>
+        </div>
+        <div class="discover-text-area">
+          <div class="discover-title">
+            <h1 class="discover-title-txt">DISCOVER JAPAN</h1>
+          </div>
+          <div class="discover-image-area"></div>
+          <div class="discover-maintext d-flex align-items-center">
+            <p class="discover-maintext-txt">"Japan blends traditional and modern culture in a unique way. With stunning landscapes, vibrant cities, and world-famous cuisine, it's a must-visit destination for adventure and discovery."</p>
+          </div>
+        </div>
+      </div>
+<!-- End of Discover/About Us Area -->
+
+
+<!-- Start of Gallery -->
+<section class="gallery-section container">
+<div class="gallery-title-area">
+  <h1 class="discover-title-txt">Gallery</h1>
+</div>
+
+<div id="gallerycarousel" class="carousel slide">
+  <div class="carousel-inner">
     <div class="carousel-item active">
-      <div class="tokyo d-flex justify-content-center text-align-center align-items-center">
-        
+      <div class="row">
+        <div class="col-lg-3">
+          <img src="/images/gallery/image1.png" class="d-block w-100" alt="...">
+        </div>
+
+        <div class="col-lg-3">
+          <img src="/images/gallery/image2.png" class="d-block w-100" alt="...">
+        </div>
+
+        <div class="col-lg-3">
+          <img src="/images/gallery/image3.png" class="d-block w-100" alt="...">
+        </div>
+
+        <div class="col-lg-3">
+          <img src="/images//gallery/image4.png" class="d-block w-100" alt="...">
+        </div>
+
       </div>
     </div>
-    <div class="carousel-item">
-      <div class="kyoto d-flex justify-content-center text-align-center align-items-center">
-    
-      </div>
+    <div class="carousel-item w-100">
+
     </div>
     <div class="carousel-item">
-      <div class="osaka d-flex justify-content-center text-align-center align-items-center">
-   
-      </div>
+      <img src="..." class="d-block w-100" alt="...">
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+  <button class="carousel-control-prev" type="button" data-bs-target="#gallerycarousel" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+  <button class="carousel-control-next" type="button" data-bs-target="#gallerycarousel" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-<!-- Banner Texts -->
-<div class="banner-txt-div">
 
-  <p class="banner-welcome-txt">Welcome to</p>
 
-  <h1 class="banner-place-txt" id="place">TOKYO</h1>
-  <p class="banner-tagline-txt">Discover the beauty of Japan</p>
-  <button class="banner-button-explore">EXPLORE NOW</button>
-</div>
-<!-- Carousel Ends -->
-
+</section>
+<!-- End of Gallery -->
   <!-- Footer Start -->
 <div class="footer-area">
-  
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod lorem quis tincidunt luctus. Nullam vitae orci massa. Praesent et vestibulum velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed dignissim, libero at eleifend mollis, nunc arcu tincidunt ipsum, vel vestibulum sapien lectus et nisi. Maecenas faucibus, sem at rhoncus tincidunt, eros orci laoreet sapien, ac blandit neque urna vel ante. Praesent tincidunt nisi ac finibus sodales. Donec ornare euismod turpis, sit amet consectetur dolor congue id. Proin a leo ullamcorper, egestas urna at, efficitur massa. Fusce accumsan congue est, vitae facilisis ante feugiat eu. Praesent sagittis a nisl ut sollicitudin. Morbi nec odio bibendum, blandit arcu ac, fringilla elit.
+
+Vivamus tempor turpis at dolor eleifend, non dictum augue ultricies. In tincidunt augue sed ante imperdiet, id gravida ipsum congue. Integer sit amet laoreet erat. Sed ut sodales est, eget facilisis augue. Sed ut erat id metus congue bibendum at sit amet leo. Fusce quis dolor ac metus malesuada pretium. Vivamus luctus ullamcorper augue, ac venenatis neque. Donec non sapien sed augue bibendum blandit a a velit. Suspendisse vitae urna sit amet velit blandit volutpat quis vitae lorem. Suspendisse tincidunt est eu magna porttitor, ut iaculis tortor pharetra. Duis semper justo non arcu eleifend, id elementum ante gravida.
+
+Maecenas laoreet elit dui, nec fringilla augue varius at. Morbi in augue a ipsum ullamcorper bibendum eget non magna. In hac habitasse platea dictumst. Nulla at molestie libero. Sed eget sagittis orci. Curabitur lobortis finibus mauris vel tempus. Aliquam non risus at metus tempor blandit in eu turpis. Integer dignissim pretium ultrices. Nam vestibulum tellus metus, at facilisis eros auctor at. Nulla ac augue quis libero pharetra blandit. Sed quis odio molestie, ornare lorem id, lobortis velit. Suspendisse vel lectus massa. Sed eget felis eu tortor placerat lobortis. Duis consectetur, arcu a vulputate hendrerit, nisl arcu pulvinar sapien, eu egestas eros felis id leo.
+
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod lorem quis tincidunt luctus. Nullam vitae orci massa. Praesent et vestibulum velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed dignissim, libero at eleifend mollis, nunc arcu tincidunt ipsum, vel vestibulum sapien lectus et nisi. Maecenas faucibus, sem at rhoncus tincidunt, eros orci laoreet sapien, ac blandit neque urna vel ante. Praesent tincidunt nisi ac finibus sodales. Donec ornare euismod turpis, sit amet consectetur dolor congue id. Proin a leo ullamcorper, egestas urna at, efficitur massa. Fusce accumsan congue est, vitae facilisis ante feugiat eu. Praesent sagittis a nisl ut sollicitudin. Morbi nec odio bibendum, blandit arcu ac, fringilla elit.
+
+Vivamus tempor turpis at dolor eleifend, non dictum augue ultricies. In tincidunt augue sed ante imperdiet, id gravida ipsum congue. Integer sit amet laoreet erat. Sed ut sodales est, eget facilisis augue. Sed ut erat id metus congue bibendum at sit amet leo. Fusce quis dolor ac metus malesuada pretium. Vivamus luctus ullamcorper augue, ac venenatis neque. Donec non sapien sed augue bibendum blandit a a velit. Suspendisse vitae urna sit amet velit blandit volutpat quis vitae lorem. Suspendisse tincidunt est eu magna porttitor, ut iaculis tortor pharetra. Duis semper justo non arcu eleifend, id elementum ante gravida.
+
+
+
 </div>
   <!-- Footer ends -->
+
+
+</div>
 </body>
 </html>

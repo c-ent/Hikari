@@ -1,4 +1,14 @@
+body{
+    background-color: black !important;
+}
 
+.landing-page-wrap{
+    margin: 50px;
+}
+
+.navbar{
+    background-color:  rgba(0, 0, 0, 0.54) !important;
+}
 
 .tokyo,.kyoto,.osaka{
         width: 100%;
@@ -81,9 +91,61 @@ p,h1{
 }
 
 
-@media screen and (max-width: 768px) {
+/* Discover CSS */
+
+.discover-area{
+    padding: 50px 0px 50px 0px;
+}
+
+
+.discover-title-txt{
+    color: #fff;
+    font-family: Inter;
+    font-weight: bold;
+    font-size: 4rem;
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 8px;
+}
+
+.discover-maintext-txt{
+    color: #fff;
+    font-family: Inter;
+    font-weight: Light;
+    padding: 100px 200px 100px 200px;
+}
+.discover-image-area{
+    height: 300px;
+    width: 100%;
+  background-image: url(../images/discoverimg.png);
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+/*  */
+
+
+
+
+@media screen and (max-width: 576px) {
     .banner-place-txt{
         font-size: 5rem !important;
+    }
+    .discover-title-txt{
+        font-size: 3rem;
+    }
+    .discover-image-area{
+        height: 450px;
+    }
+
+    .discover-maintext-txt{
+        padding: 50px 0px 50px 0px;
     }
 
     
