@@ -1,31 +1,25 @@
 // Loading area function
 document.onreadystatechange = function() {
   if (document.readyState !== "complete") {
-    document.querySelector("body").style.visibility = "hidden";
-    document.querySelector("#loading").style.visibility = "visible";
+      document.querySelector(
+        "body").style.visibility = "hidden";
+      document.querySelector(
+        "#loading").style.visibility = "visible";
   } else {
-    var images = document.querySelectorAll('.carousel-item');
-    var imagesLoaded = 0;
-
-    // Check if all images are loaded
-    var checkImagesLoaded = function() {
-      if (imagesLoaded === images.length) {
-        document.querySelector("#loading").style.visibility = "hidden";
-        document.querySelector("body").style.visibility = "visible";
-      }
-    };
-
-    // Loop through images and wait for each to load
-    for (var i = 0; i < images.length; i++) {
-      var image = new Image();
-      image.onload = function() {
-        imagesLoaded++;
-        checkImagesLoaded();
-      };
-      image.src = images[i].getAttribute('data-bgimage');
-    }
+      document.querySelector(
+        "#loading").style.visibility = "hidden";
+      document.querySelector(
+        "body").style.visibility = "visible";
   }
 };
+
+var carouselBgImg = document.querySelector('.carousel .bg-img');
+carouselBgImg.addEventListener('load', function() {
+  document.querySelector(
+    "#loading").style.display = "none";
+  document.querySelector(
+    ".carousel").style.display = "block";
+});
 
 
 
