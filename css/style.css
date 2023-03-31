@@ -2,12 +2,35 @@ body{
     background-color: black !important;
 }
 
+@font-face {
+    font-family: Inter;
+    src: url('../fonts/Inter/Inter-VariableFont_slnt\,wght.ttf');
+}
+.loading-area{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+}
+
+
 .landing-page-wrap{
     margin: 50px;
 }
 
 .navbar{
     background-color:  rgba(0, 0, 0, 0.54) !important;
+}
+
+.logo-text{
+    font-weight: bold;
+
 }
 
 .tokyo,.kyoto,.osaka{
@@ -41,15 +64,12 @@ transform: translate(-50%, -50%);
 text-align: center;
 }
 
-@font-face {
-    font-family: Inter;
-    src: url('../fonts/Inter/Inter-VariableFont_slnt\,wght.ttf');
-}
+
 p,h1{
     margin: 0;
     padding: 0;
 }
-.banner-welcome-txt,.banner-place-txt,.banner-tagline-txt{
+.banner-welcome-txt,.banner-place-txt,.banner-tagline-txt,.logo-text{
     color: #fff;
     font-family: Inter;
 }
@@ -131,6 +151,7 @@ line-height: 77px;
     text-decoration-color: red;
     text-decoration-thickness: 4px;
     text-underline-offset: 8px;
+    line-height: 100px;
 }
 
 .discover-maintext-txt{
@@ -148,8 +169,6 @@ line-height: 77px;
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-
 /*  */
 
 
@@ -163,6 +182,10 @@ line-height: 77px;
 
     .banner-place-japanese{
         font-size: 2rem;
+    }
+
+    .coordinates-jp{
+        font-size: 1rem;
     }
     .discover-title-txt{
         font-size: 3rem;

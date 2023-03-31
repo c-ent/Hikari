@@ -19,6 +19,11 @@
    ;
 }
 
-.carousel,.carousel-inner{
+.carousel-banner-inner{
     height: 100vh !important;
+}
+
+
+#gallerycarousel{
+    height: 100% !important;
 }

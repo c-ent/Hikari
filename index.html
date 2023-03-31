@@ -24,18 +24,26 @@
 
 <div class="">
 <!-- Loading Start -->
-<div class="loading-area"id="loading">
-   Loading ⌛
+<div class="loading-area d-flex justify-content-center text-align-center align-items-center" id="loading">
+
+    <div class="loading-text text">
+      <div class="d-flex justify-content-center align-items-center">
+        <i class="fa-solid fa-torii-gate fa-spin" style="color: #ff0000;font-size: 50px;"></i>
+      </div>
+    </div>
+  </div>
+
 </div>
 <!--Loading End -->
 
       <!-- Header -->
       <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
         <div class="container">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand d-flex align-items-center" href="#">
             <i class="fa-solid fa-torii-gate" style="color: #ff0000;margin:10px ;"></i>
-            JAPAN
+            <p CLASS="logo-text">JAPAN</p>
           </a>
+          
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
           </button>
@@ -60,7 +68,7 @@
             <button type="button" data-bs-target="#bannercarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#bannercarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
           </div>
-            <div class="carousel-inner" style=" position: relative;">
+            <div class="carousel-inner carousel-banner-inner" style=" position: relative;">
               <div class="carousel-item active">
                 <div class="tokyo d-flex justify-content-center text-align-center align-items-center"></div>
               </div>
@@ -120,30 +128,56 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
       <div class="row">
-        <div class="col-lg-3">
+        <div class="col-4">
           <img src="images/gallery/image1.png" class="d-block w-100" alt="...">
         </div>
 
-        <div class="col-lg-3">
+        <div class="col-4">
           <img src="images/gallery/image2.png" class="d-block w-100" alt="...">
         </div>
 
-        <div class="col-lg-3">
+        <div class="col-4">
           <img src="images/gallery/image3.png" class="d-block w-100" alt="...">
-        </div>
-
-        <div class="col-lg-3">
-          <img src="images/gallery/image4.png" class="d-block w-100" alt="...">
         </div>
 
       </div>
     </div>
-    <div class="carousel-item w-100">
 
-    </div>
     <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
+      <div class="row">
+        <div class="col-4">
+          <img src="images/gallery/image1.png" class="d-block w-100" alt="...">
+        </div>
+
+        <div class="col-4">
+          <img src="images/gallery/image2.png" class="d-block w-100" alt="...">
+        </div>
+
+        <div class="col-4">
+          <img src="images/gallery/image3.png" class="d-block w-100" alt="...">
+        </div>
+
+      </div>
     </div>
+
+    <div class="carousel-item">
+      <div class="row">
+        <div class="col-4">
+          <img src="images/gallery/image1.png" class="d-block w-100" alt="...">
+        </div>
+
+        <div class="col-4">
+          <img src="images/gallery/image2.png" class="d-block w-100" alt="...">
+        </div>
+
+        <div class="col-4">
+          <img src="images/gallery/image3.png" class="d-block w-100" alt="...">
+        </div>
+
+      </div>
+    </div>
+   
+    
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#gallerycarousel" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

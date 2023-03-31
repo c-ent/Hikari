@@ -1,5 +1,4 @@
 // Loading area function
-
 document.onreadystatechange = function() {
   if (document.readyState !== "complete") {
       document.querySelector(
@@ -8,7 +7,7 @@ document.onreadystatechange = function() {
         "#loading").style.visibility = "visible";
   } else {
       document.querySelector(
-        "#loading").style.display = "none";
+        "#loading").style.visibility = "hidden";
       document.querySelector(
         "body").style.visibility = "visible";
   }
