@@ -6,6 +6,14 @@ body{
     font-family: Inter;
     src: url('../fonts/Inter/Inter-VariableFont_slnt\,wght.ttf');
 }
+
+li,ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+
 .loading-area{
     position: fixed;
     width: 100%;
@@ -171,6 +179,21 @@ line-height: 77px;
 }
 /*  */
 
+/* Gallery Section */
+.gallery-section{
+    margin-bottom: 50px;
+}
+
+/* Footer Area */
+
+.footer-area{
+    background-color: rgb(182, 12, 12);
+    padding-top: 50px;
+}
+
+
+
+
 
 
 
@@ -188,10 +211,10 @@ line-height: 77px;
         font-size: 1rem;
     }
     .discover-title-txt{
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     .discover-image-area{
-        height: 450px;
+        height: 400px;
     }
 
     .discover-maintext-txt{

@@ -1,6 +1,6 @@
 .offcanvas{
     --bs-offcanvas-width: min(300px) !important;
-    --bs-offcanvas-bg: rgba(0, 0, 0, 0.54) !important;
+    --bs-offcanvas-bg: rgba(255, 0, 0, 0.54) !important;
 }
 
 .nav-link{
