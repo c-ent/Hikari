@@ -13,15 +13,6 @@ document.onreadystatechange = function() {
   }
 };
 
-var carouselBgImg = document.querySelector('.carousel .bg-img');
-carouselBgImg.addEventListener('load', function() {
-  document.querySelector(
-    "#loading").style.display = "none";
-  document.querySelector(
-    ".carousel").style.display = "block";
-});
-
-
 
 document.addEventListener('slide.bs.carousel', function(event){
     var activeSlide = event.to;
