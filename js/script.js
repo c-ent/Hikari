@@ -20,12 +20,15 @@ document.addEventListener('slide.bs.carousel', function(event){
 switch (activeSlide) {
     case 0:
     document.getElementById("place").textContent = 'TOKYO';
+    document.getElementById("jpplace").textContent = '東京 (とうきょう)';
     break;
     case 1:
     document.getElementById("place").textContent = 'KYOTO';
+    document.getElementById("jpplace").textContent = '京都 (きょうと)';
     break;
     case 2:
     document.getElementById("place").textContent = 'OSAKA';
+    document.getElementById("jpplace").textContent = '大阪 (おおさか)';
     break;
   }
 });
