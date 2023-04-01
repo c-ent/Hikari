@@ -184,6 +184,18 @@ line-height: 77px;
     margin-bottom: 50px;
 }
 
+.gallery-image-container {
+    overflow: hidden;
+  }
+  
+  .gallery-image-container img {
+    transition: transform 0.3s;
+  }
+  
+  .gallery-image-container:hover img {
+    transform: scale(1.1);
+  }
+
 /* Footer Area */
 
 .footer-area{
