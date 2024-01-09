@@ -1,2 +1,2 @@
-# LandingPage-Japan
+# ExploreNihon
  
