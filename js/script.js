@@ -13,6 +13,13 @@ document.onreadystatechange = function() {
   }
 };
 
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', function() {
+      document.querySelector('.active-link')?.classList.remove('active-link');
+      this.classList.add('active-link');
+  });
+});
+
 
 document.addEventListener('slide.bs.carousel', function(event){
     var activeSlide = event.to;

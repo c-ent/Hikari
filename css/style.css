@@ -13,6 +13,14 @@ li,ul{
     margin: 0;
 }
 
+.active-link {
+    color: red !important;
+}
+
+.active-link {
+    color: red !important;
+}
+
 
 .loading-area{
     position: fixed;
