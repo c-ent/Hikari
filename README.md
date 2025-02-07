@@ -1,4 +1,4 @@
 # Hikari
 
-## A landing page based on Japan
+## Simple Japan Landing Page
  
