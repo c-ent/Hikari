@@ -1,342 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hikari</title>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="icon" href="images/icons/logo.svg" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/custombootstrap.css">
     <meta name="description" content="Discover the beauty of Japan with Hikari. Explore top destinations, travel tips, and cultural insights. Your adventure starts here!">
     <meta name="keywords" content="Japan, travel, culture, tourism, Hikari, explore, adventure, tips, destinations">
     <meta name="author" content="Elher Encarnacion">
-    <!-- Leaflet -->
+    <title>Hikari</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/icons/logo.svg" type="image/x-icon">
+    
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
     crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-    crossorigin=""></script>
     
-    <!-- Bootstrap -->
-    <script src="js/script.js"></script>
-    <script src="js/bootstrap/bootstrap.min.js"></script>
-    
-    <!-- Google Font -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custombootstrap.css">
+  </head>
+  <body>
+    <!-- Loading Start -->
+    <div class="">
         
-</head>
-<body>
+        <div class="loading-area d-flex justify-content-center text-align-center align-items-center" id="loading">
 
-<div class="">
-      <!-- Loading Start -->
-      <div class="loading-area d-flex justify-content-center text-align-center align-items-center" id="loading">
-
-          <div class="loading-text text">
-            <div class="d-flex justify-content-center align-items-center">
-              <i class="fa-solid fa-torii-gate fa-spin" style="color: #ff0000;font-size: 50px;"></i>
+            <div class="loading-text text">
+              <div class="d-flex justify-content-center align-items-center">
+                <i class="fa-solid fa-torii-gate fa-spin" style="color: #ff0000;font-size: 50px;"></i>
+              </div>
             </div>
           </div>
-        </div>
+    </div>
+    <!--Loading End -->
 
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="images/icons/logo.svg" alt="Logo" width="30" height="30" class="d-inline-block align-text-top me-2">
+          <p CLASS="logo-text" >HIKARI</p>
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
+        </button>
+        <div class="offcanvas offcanvas-start w-100" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+              <img src="images/icons/logo.svg" alt="Logo" width="30" height="30" class="d-inline-block align-text-top me-2">
+              <p CLASS="logo-text" >HIKARI</p>
+            </a>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav  mb-2 mb-lg-0">
+              <li data-bs-dismiss="offcanvas" class="nav-item "> <a class="nav-link active text-center off-canvas-menu" aria-current="page" href="#"> Home</a></li>
+              <li data-bs-dismiss="offcanvas" class="nav-item "><a class="nav-link text-center off-canvas-menu" href="#discover">Discover</a></li>
+              <li data-bs-dismiss="offcanvas" class="nav-item "><a class="nav-link text-center off-canvas-menu" href="#gallery">Gallery</a></li>
+              <li data-bs-dismiss="offcanvas" class="nav-item "><a class="nav-link text-center off-canvas-menu" href="#explore-map">Explore</a></li>
+              <li data-bs-dismiss="offcanvas" class="nav-item"><a class="nav-link text-center off-canvas-menu" href="#tips">Tips</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <!--Loading End -->
-
-      <!-- Header -->
-      <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
-        <div class="container">
-          <a class="navbar-brand d-flex align-items-center" href="#">
-            <img src="images/icons/logo.svg" alt="Logo" width="30" height="30" class="d-inline-block align-text-top me-2">
-            <p CLASS="logo-text" >HIKARI</p>
-          </a>
-          
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-            <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
-          </button>
-          <div class="offcanvas offcanvas-start w-100" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-              <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="images/icons/logo.svg" alt="Logo" width="30" height="30" class="d-inline-block align-text-top me-2">
-                <p CLASS="logo-text" >HIKARI</p>
-              </a>
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav  mb-2 mb-lg-0">
-                <li data-bs-dismiss="offcanvas" class="nav-item "> <a class="nav-link active text-center off-canvas-menu" aria-current="page" href="#"> Home</a></li>
-                <li data-bs-dismiss="offcanvas" class="nav-item "><a class="nav-link text-center off-canvas-menu" href="#discover">Discover</a></li>
-                <li data-bs-dismiss="offcanvas" class="nav-item "><a class="nav-link text-center off-canvas-menu" href="#gallery">Gallery</a></li>
-                <li data-bs-dismiss="offcanvas" class="nav-item "><a class="nav-link text-center off-canvas-menu" href="#explore-map">Explore</a></li>
-                <li data-bs-dismiss="offcanvas" class="nav-item"><a class="nav-link text-center off-canvas-menu" href="#tips">Tips</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </nav>
+    </nav>
     <!-- Header Ends -->
 
-      <!-- Carousel Start-->
-      <div id="bannercarousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#bannercarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#bannercarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#bannercarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          </div>
-            <div class="carousel-inner carousel-banner-inner" style=" position: relative;">
-              <div class="carousel-item active">
-                <div class="tokyo d-flex justify-content-center text-align-center align-items-center"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="kyoto d-flex justify-content-center text-align-center align-items-center"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="osaka d-flex justify-content-center text-align-center align-items-center"></div>
-              </div>
-            </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#bannercarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#bannercarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
+    <!-- Carousel Section-->
+    <div id="bannercarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#bannercarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#bannercarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#bannercarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
-              <!-- Banner Texts -->
-              <div class="banner-txt-div">
-                <p class="banner-welcome-txt">Welcome to</p>
-                <h1 class="banner-place-txt" id="place">TOKYO</h1>
-                <h1 class="banner-place-japanese" id="jpplace">とうきょう</h1>
-                <p class="banner-tagline-txt">Discover the beauty of Japan</p>
-                <a href="#explore-map"><button class="banner-button-explore">EXPLORE NOW</button></a>
-              </div>
-        <!-- Carousel Ends -->
+          <div class="carousel-inner carousel-banner-inner" style=" position: relative;">
+            <div class="carousel-item active">
+              <div class="tokyo d-flex justify-content-center text-align-center align-items-center"></div>
+            </div>
+            <div class="carousel-item">
+              <div class="kyoto d-flex justify-content-center text-align-center align-items-center"></div>
+            </div>
+            <div class="carousel-item">
+              <div class="osaka d-flex justify-content-center text-align-center align-items-center"></div>
+            </div>
+          </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#bannercarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#bannercarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+    </div>
+
+    <!-- Banner Texts -->
+    <div class="banner-txt-div">
+      <p class="banner-welcome-txt">Welcome to</p>
+      <h1 class="banner-place-txt" id="place">TOKYO</h1>
+      <h1 class="banner-place-japanese" id="jpplace">とうきょう</h1>
+      <p class="banner-tagline-txt">Discover the beauty of Japan</p>
+      <a href="#explore-map"><button class="banner-button-explore">EXPLORE NOW</button></a>
+    </div>
+    <!-- Carousel Ends -->
 
 
 
-<!-- Discover/About Us Area -->
-      <div class="discover-area container" id="discover">
-        <div>
-         
-          <p class="coordinates-jp"> <i class="fa-thin fa-location-dot" style="color: #ffffff;"></i> 35°N 136°E</p>
-          
-          
+    <!-- Discover/About Us Section -->
+    <div class="discover-area container" id="discover">
+      <div>
+        <p class="coordinates-jp"> <i class="fa-thin fa-location-dot" style="color: #ffffff;"></i> 35°N 136°E</p>
+      </div>
+      <div class="discover-text-area">
+        <div class="discover-title">
+          <h1 class="discover-title-txt">DISCOVER JAPAN</h1>
         </div>
-        <div class="discover-text-area">
-          <div class="discover-title">
-            <h1 class="discover-title-txt">DISCOVER JAPAN</h1>
-          </div>
-          <div class="discover-image-area"></div>
-          
-          <!-- First row with improved structure -->
-          <div class="row w-100 my-4">
-            <div class="col-md-12 col-lg-6 discover-maintext d-flex align-items-center order-lg-1 order-2 mb-4 mb-lg-0 d-none d-lg-flex">
-              <!-- Content here -->
-            </div>
-            <div class="col-md-12 col-lg-6 discover-maintext d-flex align-items-center order-lg-2 order-1">
-              <p class="discover-maintext-txt fs-6">Japan blends ancient traditions with cutting-edge technology. From serene temples to bustling metropolises, the Land of the Rising Sun offers unforgettable cultural experiences and breathtaking natural beauty.</p>
-            </div>
-          </div>
+        <div class="discover-image-area"></div>
         
-          <!-- Second row with unique content -->
-          <div class="row w-100 mb-4">
-            <div class="col-md-12 col-lg-6 discover-maintext d-flex align-items-center mb-lg-0">
-              <p class="discover-maintext-txt fs-6">Four distinct seasons paint Japan in ever-changing colors - from spring's cherry blossoms to autumn's fiery maples. Each visit reveals new perspectives on this fascinating country where hospitality is an art form.</p>
-            </div>
-            <div class="col-md-12 col-lg-6 discover-maintext d-flex align-items-center order-lg-1 order-2 mb-4 mb-lg-0 d-none d-lg-flex">
-              <!-- Content here -->
-            </div>
+        <div class="row w-100 my-4">
+          <div class="col-md-12 col-lg-6 discover-maintext d-flex align-items-center order-lg-1 order-2 mb-4 mb-lg-0 d-none d-lg-flex">
+            <!-- Content here -->
           </div>
+          <div class="col-md-12 col-lg-6 discover-maintext d-flex align-items-center order-lg-2 order-1">
+            <p class="discover-maintext-txt fs-6">Japan blends ancient traditions with cutting-edge technology. From serene temples to bustling metropolises, the Land of the Rising Sun offers unforgettable cultural experiences and breathtaking natural beauty.</p>
+          </div>
+        </div>
+
+        <div class="row w-100 mb-4">
+          <div class="col-md-12 col-lg-6 discover-maintext d-flex align-items-center mb-lg-0">
+            <p class="discover-maintext-txt fs-6">Four distinct seasons paint Japan in ever-changing colors - from spring's cherry blossoms to autumn's fiery maples. Each visit reveals new perspectives on this fascinating country where hospitality is an art form.</p>
+          </div>
+          <div class="col-md-12 col-lg-6 discover-maintext d-flex align-items-center order-lg-1 order-2 mb-4 mb-lg-0 d-none d-lg-flex">
+            <!-- Content here -->
+          </div>
+        </div>
+      
+      </div>
+    </div>
+
+
+
+    <!-- Gallery Section -->
+    <section class="gallery-section container" id="gallery">
+    <div class="gallery-title-area">
+      <h1 class="discover-title-txt">Gallery</h1>
+    </div>
+
+    <div id="gallerycarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item ">
+          <div class="row">
+            <div class="col-4 gallery-image-container">
+              <img src="images/gallery/image1.avif" class="d-block w-100" alt="...">
+            </div>
+
+            <div class="col-4 gallery-image-container">
+              <img src="images/gallery/image2.avif" class="d-block w-100" alt="...">
+            </div>
+
+            <div class="col-4 gallery-image-container">
+              <img src="images/gallery/image3.avif" class="d-block w-100" alt="...">
+            </div>
+
+          </div>
+        </div>
+
+        <div class="carousel-item ">
+          <div class="row">
+            <div class="col-4 gallery-image-container">
+              <img src="images/gallery/image4.avif" class="d-block w-100" alt="...">
+            </div>
+
+            <div class="col-4 gallery-image-container">
+              <img src="images/gallery/image5.avif" class="d-block w-100" alt="...">
+            </div>
+
+            <div class="col-4 gallery-image-container">
+              <img src="images/gallery/image6.avif" class="d-block w-100" alt="...">
+            </div>
+
+          </div>
+        </div>
+
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-4 gallery-image-container">
+              <img src="images/gallery/image7.avif" class="d-block w-100" alt="...">
+            </div>
+
+            <div class="col-4 gallery-image-container">
+              <img src="images/gallery/image8.avif" class="d-block w-100" alt="...">
+            </div>
+
+            <div class="col-4 gallery-image-container" >
+              <img src="images/gallery/image9.avif" class="d-block w-100" alt="...">
+            </div>
+
+          </div>
+        </div>
+
         
-          <!-- Third row with unique content -->
-          <div class="row w-100">
-            <div class="col-md-12 col-lg-6 discover-maintext d-flex align-items-center order-lg-1 order-2 mb-4 mb-lg-0 d-none d-lg-flex">
-              <!-- Content here -->
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#gallerycarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#gallerycarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+
+    </section>
+
+
+    <!-- Map Section -->
+    <section class="map-section container" id="explore-map">
+      <div class="map-title-area">
+        <h1 class="discover-title-txt">Explore Japan</h1>
+        <p class="map-subtitle mb-4">Discover top destinations across Japan</p>
+      </div>
+
+      <div class="w-100">
+        <div class="p-0">
+          <div id="japan-map"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Travel Tips & Guides Section -->
+    <section class="travel-tips-section container" id="tips">
+      <div class="tips-title-area">
+        <h1 class="discover-title-txt">Travel Tips & Guides</h1>
+        <p class="tips-subtitle mb-4">Essential information for your Japanese adventure</p>
+      </div>
+
+      <div class="row tips-cards text-white">
+        <div class="col-md-4 mb-4">
+          <div class="tip-image-container">
+            <img src="images/tips-guide/lang.avif" alt="Language Icon" class="tip-icon w-100 ratio ratio-3x4 object-fit-cover">
+          </div>
+          <div class="tip-card">
+            <h3 class="tip-card-title">Language & Communication</h3>
+            <p class="tip-card-desc fs-6">English is spoken in tourist areas, but learning basic Japanese phrases enhances your experience. Download a translation app and consider carrying a pocket phrasebook.</p>
+          </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+          <div class="tip-image-container">
+            <img src="images/tips-guide/train.avif" alt="Transportation Icon" class="tip-icon w-100 ratio ratio-3x4 object-fit-cover">
+          </div>
+          <div class="tip-card">
+            <h3 class="tip-card-title">Transportation</h3>
+            <p class="tip-card-desc fs-6">Japan's rail network makes travel convenient. Consider a Japan Rail Pass for long-distance trips. Trains are punctual, so arrive early and use apps like Japan Transit Planner.</p>
+          </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+          <div class="tip-image-container">
+            <img src="images/tips-guide/cherry.avif" alt="Cherry Blossoms Icon" class="tip-icon w-100 ratio ratio-3x4 object-fit-cover">
+          </div>
+          <div class="tip-card">
+            <h3 class="tip-card-title">Best Times to Visit</h3>
+            <p class="tip-card-desc fs-6">Spring (Mar-May) for cherry blossoms and autumn (Sep-Nov) for colorful foliage. Summer brings festivals while winter offers skiing in Hokkaido and fewer tourists at attractions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Logo Section  -->
+    <section class="logo-section py-5">
+      <div class="container text-center">
+        <img src="images/icons/logo.svg" alt="Hikari Logo" class="big-logo mb-3">
+      </div>
+    </section>
+
+    <!-- Footer Start -->
+    <footer class="footer-area">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-md-4">
+            <div class="text-center text-md-start">
+              <a href="#" class="footer-brand d-inline-flex align-items-center text-decoration-none">
+                <img src="images/icons/logo.svg" alt="Hikari" width="24" height="24" class="me-2">
+                <span class="logo-text">HIKARI</span>
+              </a>
             </div>
-            <div class="col-md-12 col-lg-6 discover-maintext d-flex align-items-center order-lg-2 order-1">
-              <p class="discover-maintext-txt fs-6">Japanese cuisine delights with its regional diversity and meticulous preparation. From world-famous sushi to comforting ramen, each dish reflects Japan's dedication to perfection and harmony with the seasons.</p>
+          </div>
+          <div class="col-md-4 d-flex align-items-center  justify-content-center">
+            <div class="d-flex justify-content-center" style="color:white">
+              <p class="copyright-text">© 2023-2025</p>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex align-items-center justify-content-md-end justify-content-center">
+            <div class="social-icons">
+              <a href="#" class="social-icon text-white"><i class="fab fa-facebook-square"></i></a>
+              <a href="#" class="social-icon text-white"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon text-white"><i class="fab fa-instagram"></i></a>
             </div>
           </div>
         </div>
       </div>
-<!-- End of Discover/About Us Area -->
+    </footer>
+  
 
 
-<!-- Start of Gallery -->
-<section class="gallery-section container" id="gallery">
-<div class="gallery-title-area">
-  <h1 class="discover-title-txt">Gallery</h1>
-</div>
+  <!-- JavaScript Libraries -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin=""></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-<div id="gallerycarousel" class="carousel slide">
-  <div class="carousel-inner">
-    <div class="carousel-item ">
-      <div class="row">
-        <div class="col-4 gallery-image-container">
-          <img src="images/gallery/image1.avif" class="d-block w-100" alt="...">
-        </div>
-
-        <div class="col-4 gallery-image-container">
-          <img src="images/gallery/image2.avif" class="d-block w-100" alt="...">
-        </div>
-
-        <div class="col-4 gallery-image-container">
-          <img src="images/gallery/image3.avif" class="d-block w-100" alt="...">
-        </div>
-
-      </div>
-    </div>
-
-    <div class="carousel-item ">
-      <div class="row">
-        <div class="col-4 gallery-image-container">
-          <img src="images/gallery/image4.avif" class="d-block w-100" alt="...">
-        </div>
-
-        <div class="col-4 gallery-image-container">
-          <img src="images/gallery/image5.avif" class="d-block w-100" alt="...">
-        </div>
-
-        <div class="col-4 gallery-image-container">
-          <img src="images/gallery/image6.avif" class="d-block w-100" alt="...">
-        </div>
-
-      </div>
-    </div>
-
-    <div class="carousel-item active">
-      <div class="row">
-        <div class="col-4 gallery-image-container">
-          <img src="images/gallery/image7.avif" class="d-block w-100" alt="...">
-        </div>
-
-        <div class="col-4 gallery-image-container">
-          <img src="images/gallery/image8.avif" class="d-block w-100" alt="...">
-        </div>
-
-        <div class="col-4 gallery-image-container" >
-          <img src="images/gallery/image9.avif" class="d-block w-100" alt="...">
-        </div>
-
-      </div>
-    </div>
-
-    
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#gallerycarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#gallerycarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-
-
-</section>
-<!-- End of Gallery -->
-
-<section class="map-section container" id="explore-map">
-  <div class="map-title-area">
-    <h1 class="discover-title-txt">Explore Japan</h1>
-    <p class="map-subtitle mb-4">Discover top destinations across Japan</p>
-  </div>
-
-  <div class="w-100">
-    <div class="p-0">
-      <div id="japan-map"></div>
-    </div>
-  </div>
-</section>
-
-<!-- Travel Tips & Guides Section -->
-<section class="travel-tips-section container" id="tips">
-  <div class="tips-title-area">
-    <h1 class="discover-title-txt">Travel Tips & Guides</h1>
-    <p class="tips-subtitle mb-4">Essential information for your Japanese adventure</p>
-  </div>
-
-  <div class="row tips-cards text-white">
-    <div class="col-md-4 mb-4">
-      <div class="tip-image-container">
-        <img src="images/tips-guide/lang.avif" alt="Language Icon" class="tip-icon w-100 ratio ratio-3x4 object-fit-cover">
-      </div>
-      <div class="tip-card">
-        <h3 class="tip-card-title">Language & Communication</h3>
-        <p class="tip-card-desc fs-6">English is spoken in tourist areas, but learning basic Japanese phrases enhances your experience. Download a translation app and consider carrying a pocket phrasebook.</p>
-      </div>
-    </div>
-    
-    <div class="col-md-4 mb-4">
-      <div class="tip-image-container">
-        <img src="images/tips-guide/train.avif" alt="Transportation Icon" class="tip-icon w-100 ratio ratio-3x4 object-fit-cover">
-      </div>
-      <div class="tip-card">
-        <h3 class="tip-card-title">Transportation</h3>
-        <p class="tip-card-desc fs-6">Japan's rail network makes travel convenient. Consider a Japan Rail Pass for long-distance trips. Trains are punctual, so arrive early and use apps like Japan Transit Planner.</p>
-      </div>
-    </div>
-    
-    <div class="col-md-4 mb-4">
-       <div class="tip-image-container">
-        <img src="images/tips-guide/cherry.avif" alt="Cherry Blossoms Icon" class="tip-icon w-100 ratio ratio-3x4 object-fit-cover">
-      </div>
-      <div class="tip-card">
-        <h3 class="tip-card-title">Best Times to Visit</h3>
-        <p class="tip-card-desc fs-6">Spring (Mar-May) for cherry blossoms and autumn (Sep-Nov) for colorful foliage. Summer brings festivals while winter offers skiing in Hokkaido and fewer tourists at attractions.</p>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End of Travel Tips & Guides Section -->
-
-
-<!-- Logo Section Start -->
-<section class="logo-section py-5">
-  <div class="container text-center">
-    <img src="images/icons/logo.svg" alt="Hikari Logo" class="big-logo mb-3">
-  </div>
-</section>
-<!-- Logo Section End -->
-
-
-<!-- Footer Start -->
-<footer class="footer-area">
-  <div class="container">
-    <div class="row justify-content-between">
-      <div class="col-md-4">
-        <div class="text-center text-md-start">
-          <a href="#" class="footer-brand d-inline-flex align-items-center text-decoration-none">
-            <img src="images/icons/logo.svg" alt="Hikari" width="24" height="24" class="me-2">
-            <span class="logo-text">HIKARI</span>
-          </a>
-        </div>
-      </div>
-      <div class="col-md-4 d-flex align-items-center  justify-content-center">
-        <div class="d-flex justify-content-center" style="color:white">
-          <p class="copyright-text">© 2023-2025</p>
-        </div>
-      </div>
-      <div class="col-md-4 d-flex align-items-center justify-content-md-end justify-content-center">
-        <div class="social-icons">
-          <a href="#" class="social-icon text-white"><i class="fab fa-facebook-square"></i></a>
-          <a href="#" class="social-icon text-white"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="social-icon text-white"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-<!-- Footer ends -->
-
-
-</div>
-</body>
+  <!-- Custom JavaScript -->
+  <script src="js/script.js"></script>
+  </body>
 </html>
