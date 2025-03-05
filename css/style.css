@@ -183,10 +183,19 @@ line-height: 77px;
   height: 300px;
   width: 100%;
   background-image: url(../images/discoverimg.png);
+  background-attachment: fixed;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+/* Ios Fixed on Background of Discover Image Area */
+@supports (-webkit-touch-callout: none) {
+  .discover-image-area {
+      background-attachment: scroll;
+  }
+}
+
 /*  */
 
 /* Gallery Section */
