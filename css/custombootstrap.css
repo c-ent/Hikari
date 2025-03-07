@@ -1,6 +1,12 @@
 .offcanvas{
-    --bs-offcanvas-width: min(300px) !important;
-    --bs-offcanvas-bg: rgba(0, 0, 0, 0.54) !important;
+    --bs-offcanvas-bg: rgba(0, 0, 0, 0.973) !important;
+    
+}
+.offcanvas-body{
+    justify-content: center !important;
+    align-items: center !important;
+    display: flex;
+    margin-left: auto ;
 }
 
 .nav-link{
@@ -29,4 +35,19 @@
 
 #gallerycarousel{
     height: 100% !important;
+}
+
+.off-canvas-menu{
+    font-size:36px;
+    font-weight: 600 !important;
+}
+
+@media screen and (max-width: 991px) {
+    .off-canvas-menu{
+        font-size:28px !important
+    }
+    .offcanvas-body{
+       margin: auto;
+    }
+    
 }
