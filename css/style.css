@@ -182,7 +182,7 @@ line-height: 77px;
 .discover-image-area{
     height: 300px;
     width: 100%;
-    background-image: url(../images/discoverimg.png);
+    background-image: url(/images/discoverimg.png);
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
