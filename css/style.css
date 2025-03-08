@@ -41,7 +41,7 @@ li,ul{
 }
 
 .navbar{
-    background-color:  rgba(0, 0, 0, 0.54) !important;
+    background-color:  rgba(0, 0, 0, 0.615) !important;
 }
 
 .logo-text{
@@ -172,7 +172,7 @@ line-height: 77px;
 
 .discover-maintext-txt{
     font-weight: Light;
-    padding: 100px 200px 100px 200px;
+    padding: 100px 50px 100px 50px;
 }
 .discover-image-area{
     height: 300px;
@@ -229,9 +229,11 @@ line-height: 77px;
 
     .coordinates-jp{
         font-size: 1rem;
+        padding: 0px 10px 0px 10px;
     }
     .discover-title-txt{
         font-size: 2.5rem;
+        padding: 0px 10px 0px 10px;
     }
     .discover-image-area{
         height: 200px;
