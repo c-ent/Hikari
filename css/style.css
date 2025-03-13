@@ -208,10 +208,37 @@ line-height: 77px;
 
 .footer-area{
     background-color: rgb(182, 12, 12);
-    padding-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
+  }
+  
+  @media (max-width: 767px) {
+    .social-icons {
+      justify-content: center;
+    }
+  }
+  
+  .social-icon {
+    color: rgba(255, 255, 255, 0.8);
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .social-icon:hover {
+    color: white;
+    transform: translateY(-3px);
+  }
+  
+  .copyright-bar {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+  }
 
 
 
