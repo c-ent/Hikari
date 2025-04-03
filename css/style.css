@@ -5,6 +5,7 @@ html {
 
 body{
     background-color: black !important;
+    font-family: Inter;
 }
 
 @font-face {
@@ -182,7 +183,7 @@ line-height: 77px;
 
 .discover-maintext-txt{
     font-weight: Light;
-    padding: 100px 50px 100px 50px;
+    padding: 50px;
 }
 .discover-image-area{
   height: 300px;
