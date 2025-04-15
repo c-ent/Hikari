@@ -65,15 +65,15 @@ li,ul{
 }
 
 .tokyo{
-    background-image: url(../images/tokyo.png);
+    background-image: url(../images/tokyo.avif);
 }
 
 .kyoto{
-    background-image: url(../images/kyoto.png);
+    background-image: url(../images/kyoto.avif);
 }
 
 .osaka{
-    background-image: url(../images/osaka.png);
+    background-image: url(../images/osaka.avif);
 }
 
 
@@ -188,7 +188,7 @@ line-height: 77px;
 .discover-image-area{
   height: 300px;
   width: 100%;
-  background-image: url(../images/discoverimg.png);
+  background-image: url(../images/discoverimg.avif);
   background-attachment: fixed;
   background-position: center center;
   background-repeat: no-repeat;
