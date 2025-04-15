@@ -85,14 +85,16 @@ p,h1{
     margin: 0;
     padding: 0;
 }
-.banner-welcome-txt,.banner-place-txt,.banner-tagline-txt,.logo-text{
+.banner-place-txt,.banner-tagline-txt,.logo-text{
     color: #fff;
     font-family: Inter;
+    
 }
 
 .banner-welcome-txt{
     font-size: 1.5rem;
-    
+    color: #fff;
+    font-family: "Alegreya Sans SC", sans-serif;
     
 }
 
@@ -130,6 +132,9 @@ line-height: 77px;
     border: none;
     width: 250px;
     height: 40px;
+    font-weight: 600;
+    margin-top: 10px;
+    font-size: 18px;
 
 }
 .banner-button-explore:hover{
@@ -144,12 +149,13 @@ line-height: 77px;
 /* Discover CSS */
 
 .discover-area{
-    padding: 50px 0px 50px 0px;
+    padding: 50px 10px 50px 10px;
 }
 
 .discover-title-txt,.coordinates-jp,.discover-maintext-txt{
     color: #fff;
     font-family: Inter;
+   
 }
 
 .coordinates-jp{
@@ -162,12 +168,11 @@ line-height: 77px;
 
 .discover-title-txt{
     font-weight: bold;
-    font-size: 4rem;
     text-decoration: underline;
     text-decoration-color: red;
     text-decoration-thickness: 4px;
     text-underline-offset: 8px;
-    line-height: 100px;
+    margin-bottom: 20px;
 }
 
 .discover-maintext-txt{
@@ -177,7 +182,7 @@ line-height: 77px;
 .discover-image-area{
     height: 300px;
     width: 100%;
-  background-image: url(../images/discoverimg.png);
+    background-image: url(../images/discoverimg.png);
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -243,8 +248,8 @@ line-height: 77px;
 
 
 /* Interactive Map Styles */
-.map-section {
-    padding: 60px 0;
+  .map-section{
+    padding: 50px 10px 50px 10px;
   }
   
   .map-subtitle {
@@ -254,7 +259,7 @@ line-height: 77px;
   
   #japan-map {
     height: 500px;
-    width: 100%;
+    max-width: 100%;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
@@ -314,7 +319,44 @@ line-height: 77px;
     margin-bottom: 5px;
   }
 
+  /* Tips And Guides */
 
+  .tips-subtitle{
+    color: #777;
+    font-size: 1.1rem;
+  }
+
+  .tip-card-title{
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 8px;
+    line-height: 60px;
+    font-weight: 700;
+  }
+
+  .tip-card-desc{
+    font-family: Inter;
+  }
+
+  .tip-image-container {
+    overflow: hidden;
+  }
+  
+  .tip-image-container img {
+    transition: transform 0.3s ease;
+  }
+  
+  .tip-image-container:hover img {
+    transform: scale(1.1);
+  }
+  
+
+  /* Logo Section */
+
+  .big-logo{
+    width: 150px;
+  }
 
 
 
@@ -330,18 +372,20 @@ line-height: 77px;
 
     .coordinates-jp{
         font-size: 1rem;
-        padding: 0px 10px 0px 10px;
     }
     .discover-title-txt{
         font-size: 2.5rem;
-        padding: 0px 10px 0px 10px;
     }
     .discover-image-area{
         height: 200px;
     }
 
     .discover-maintext-txt{
-        padding: 50px 30px 50px 30px;
+        padding: 50px 0px 50px 00px;
+    }
+
+    .tip-card-title{
+      font-size:36px
     }
 
 

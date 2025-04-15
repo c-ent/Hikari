@@ -6,28 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hikari</title>
 
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="icon" href="images/icons/logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/custombootstrap.css">
 
+    <!-- Leaflet -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
     crossorigin=""/>
-    
-    <!-- Make sure Leaflet JS is loaded BEFORE your script.js -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
     crossorigin=""></script>
     
+    <!-- Bootstrap -->
     <script src="js/script.js"></script>
-    <!-- <script src="path/to/jquery.min.js"></script>
-    <script src="path/to/popper.min.js"></script> -->
     <script src="js/bootstrap/bootstrap.min.js"></script>
-    <!-- <script src="scss/scss/"></script> -->
-
     
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        
 </head>
 <body>
 
@@ -63,6 +64,7 @@
                 <li class="nav-item me-4" ><a class="nav-link" href="#discover">Discover</a></li>
                 <li class="nav-item me-4"><a class="nav-link" href="#gallery">Gallery</a></li>
                 <li class="nav-item"><a class="nav-link" href="#explore-map">Explore</a></li>
+                <li class="nav-item"><a class="nav-link" href="#tips">Tips</a></li>
               </ul>
             </div>
           </div>
@@ -103,7 +105,7 @@
                 <h1 class="banner-place-txt" id="place">TOKYO</h1>
                 <h1 class="banner-place-japanese" id="jpplace">とうきょう</h1>
                 <p class="banner-tagline-txt">Discover the beauty of Japan</p>
-                <a href="mailto:encarnacionelher@gmail.com"><button class="banner-button-explore">CONTACT US</button></a>
+                <a href="#explore-map"><button class="banner-button-explore">EXPLORE NOW</button></a>
               </div>
         <!-- Carousel Ends -->
 
@@ -124,10 +126,9 @@
           <div class="discover-image-area"></div>
           <div class="row w-100">
             <div class="col-md-12 col-lg-6 discover-maintext d-flex align-items-center mb-4 mb-lg-0">
-             
             </div>
             <div class="col-md-12 col-lg-6 discover-maintext d-flex align-items-center">
-              <p class="discover-maintext-txt fs-5">"Japan blends traditional and modern culture in a unique way. With stunning landscapes, vibrant cities, and world-famous cuisine, it's a must-visit destination for adventure and discovery."</p>
+              <p class="discover-maintext-txt fs-6">"Japan blends traditional and modern culture in a unique way. With stunning landscapes, vibrant cities, and world-famous cuisine, it's a must-visit destination for adventure and discovery."</p>
             </div>
           </div>
         
@@ -144,57 +145,57 @@
 
 <div id="gallerycarousel" class="carousel slide">
   <div class="carousel-inner">
+    <div class="carousel-item ">
+      <div class="row">
+        <div class="col-4 gallery-image-container">
+          <img src="images/gallery/image1.png" class="d-block w-100" alt="...">
+        </div>
+
+        <div class="col-4 gallery-image-container">
+          <img src="images/gallery/image2.png" class="d-block w-100" alt="...">
+        </div>
+
+        <div class="col-4 gallery-image-container">
+          <img src="images/gallery/image3.png" class="d-block w-100" alt="...">
+        </div>
+
+      </div>
+    </div>
+
+    <div class="carousel-item ">
+      <div class="row">
+        <div class="col-4 gallery-image-container">
+          <img src="images/gallery/image4.png" class="d-block w-100" alt="...">
+        </div>
+
+        <div class="col-4 gallery-image-container">
+          <img src="images/gallery/image5.png" class="d-block w-100" alt="...">
+        </div>
+
+        <div class="col-4 gallery-image-container">
+          <img src="images/gallery/image6.png" class="d-block w-100" alt="...">
+        </div>
+
+      </div>
+    </div>
+
     <div class="carousel-item active">
       <div class="row">
         <div class="col-4 gallery-image-container">
-          <img src="images/gallery/image1.png" class="d-block w-100" alt="...">
+          <img src="images/gallery/image7.png" class="d-block w-100" alt="...">
         </div>
 
         <div class="col-4 gallery-image-container">
-          <img src="images/gallery/image2.png" class="d-block w-100" alt="...">
-        </div>
-
-        <div class="col-4 gallery-image-container">
-          <img src="images/gallery/image3.png" class="d-block w-100" alt="...">
-        </div>
-
-      </div>
-    </div>
-
-    <div class="carousel-item">
-      <div class="row">
-        <div class="col-4 gallery-image-container">
-          <img src="images/gallery/image1.png" class="d-block w-100" alt="...">
-        </div>
-
-        <div class="col-4 gallery-image-container">
-          <img src="images/gallery/image2.png" class="d-block w-100" alt="...">
-        </div>
-
-        <div class="col-4 gallery-image-container">
-          <img src="images/gallery/image3.png" class="d-block w-100" alt="...">
-        </div>
-
-      </div>
-    </div>
-
-    <div class="carousel-item">
-      <div class="row">
-        <div class="col-4 gallery-image-container">
-          <img src="images/gallery/image1.png" class="d-block w-100" alt="...">
-        </div>
-
-        <div class="col-4 gallery-image-container">
-          <img src="images/gallery/image2.png" class="d-block w-100" alt="...">
+          <img src="images/gallery/image8.png" class="d-block w-100" alt="...">
         </div>
 
         <div class="col-4 gallery-image-container" >
-          <img src="images/gallery/image3.png" class="d-block w-100" alt="...">
+          <img src="images/gallery/image9.png" class="d-block w-100" alt="...">
         </div>
 
       </div>
     </div>
-   
+
     
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#gallerycarousel" data-bs-slide="prev">
@@ -217,12 +218,62 @@
     <p class="map-subtitle mb-4">Discover top destinations across Japan</p>
   </div>
 
-  <div class="row">
+  <div class="w-100">
     <div class="p-0">
       <div id="japan-map"></div>
     </div>
   </div>
 </section>
+
+<!-- Travel Tips & Guides Section -->
+<section class="travel-tips-section container" id="tips">
+  <div class="tips-title-area">
+    <h1 class="discover-title-txt">Travel Tips & Guides</h1>
+    <p class="tips-subtitle mb-4">Essential information for your Japanese adventure</p>
+  </div>
+
+  <div class="row tips-cards text-white">
+    <div class="col-md-4 mb-4">
+      <div class="tip-image-container">
+        <img src="images/tips-guide/lang.png" alt="Language Icon" class="tip-icon w-100 ratio ratio-3x4 object-fit-cover">
+      </div>
+      <div class="tip-card">
+        <h3 class="tip-card-title">Language & Communication</h3>
+        <p class="tip-card-desc fs-6">While English is spoken in tourist areas, learning a few basic Japanese phrases can enhance your experience. Download a translation app like Google Translate before your trip and consider carrying a pocket phrasebook. </p>
+      </div>
+    </div>
+    
+    <div class="col-md-4 mb-4">
+      <div class="tip-image-container">
+        <img src="images/tips-guide/train.png" alt="Transportation Icon" class="tip-icon w-100 ratio ratio-3x4 object-fit-cover">
+      </div>
+      <div class="tip-card">
+        <h3 class="tip-card-title">Transportation</h3>
+        <p class="tip-card-desc fs-6">Japan's extensive rail network makes travel easy. Consider a Japan Rail Pass for multiple long-distance trips.  Trains run punctually, so arrive at stations a few minutes early and check schedules using apps like Japan Transit Planner.</p>
+      </div>
+    </div>
+    
+    <div class="col-md-4 mb-4">
+       <div class="tip-image-container">
+        <img src="images/tips-guide/cherry.png" alt="Cherry Blossoms Icon" class="tip-icon w-100 ratio ratio-3x4 object-fit-cover">
+      </div>
+      <div class="tip-card">
+        <h3 class="tip-card-title">Best Times to Visit</h3>
+        <p class="tip-card-desc fs-6">Spring (March-May) for cherry blossoms and autumn (Sept-Nov) for colorful foliage offer breathtaking scenery.Summer (June-August) brings festivals and fireworks displays, while winter (Dec-Feb) offers excellent skiing in Hokkaido and fewer tourists at major attractions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End of Travel Tips & Guides Section -->
+
+
+<!-- Logo Section Start -->
+<section class="logo-section py-5">
+  <div class="container text-center">
+    <img src="images/icons/logo.svg" alt="Hikari Logo" class="big-logo mb-3">
+  </div>
+</section>
+<!-- Logo Section End -->
 
 
 <!-- Footer Start -->
@@ -239,11 +290,10 @@
       </div>
       <div class="col-md-4 d-flex align-items-center  justify-content-center">
         <div class="d-flex justify-content-center" style="color:white">
-          <p>© 2023-2025 Cent</p>
+          <p>© 2023-2025</p>
         </div>
       </div>
       <div class="col-md-4 d-flex align-items-center justify-content-md-end justify-content-center">
-        <span class="logo-text me-3">Follow Us</span>
         <div class="social-icons">
           <a href="#" class="social-icon text-white"><i class="fab fa-facebook-square"></i></a>
           <a href="#" class="social-icon text-white"><i class="fab fa-twitter"></i></a>
