@@ -15,7 +15,12 @@ document.onreadystatechange = function() {
 
 document.querySelectorAll('.nav-link').forEach(link => {
   link.addEventListener('click', function() {
-      document.querySelector('.active-link')?.classList.remove('active-link');
+      // Remove active-link class from all nav links
+      document.querySelectorAll('.nav-link').forEach(navLink => {
+          navLink.classList.remove('active-link');
+          navLink.classList.remove('active');
+      });
+      // Add active-link class to clicked link
       this.classList.add('active-link');
   });
 });

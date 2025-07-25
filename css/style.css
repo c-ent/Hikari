@@ -23,7 +23,8 @@ li,ul{
     color: red !important;
 }
 
-.active-link {
+/* Override Bootstrap's default active state */
+.nav-link.active-link {
     color: red !important;
 }
 
