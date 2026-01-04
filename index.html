@@ -302,7 +302,7 @@
           </div>
           <div class="col-md-4 d-flex align-items-center  justify-content-center">
             <div class="d-flex justify-content-center" style="color:white">
-              <p class="copyright-text">© 2023-2025</p>
+              <p class="copyright-text">© <span id="copyright-year"></span></p>
             </div>
           </div>
           <div class="col-md-4 d-flex align-items-center justify-content-md-end justify-content-center">
@@ -326,5 +326,6 @@
 
   <!-- Custom JavaScript -->
   <script src="js/script.js"></script>
+  <script>document.getElementById('copyright-year').textContent = new Date().getFullYear()</script>
   </body>
 </html>
