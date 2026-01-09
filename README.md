@@ -1,6 +1,6 @@
 # Hikari 🏯
 
-A modern, responsive landing page showcasing the beauty of Japan. Explore top destinations, travel tips, and cultural insights through an elegant, interactive website.
+A landing page showcasing the top placces in Japan.
 
 ## Features
 
