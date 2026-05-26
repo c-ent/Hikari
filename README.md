@@ -1,6 +1,6 @@
 # Hikari 🏯
 
-A landing page showcasing the top placces in Japan.
+A landing page showcasing the top places in Japan.
 
 ## Features
 
@@ -48,26 +48,30 @@ xdg-open index.html
 start index.html
 ```
 
-3. Start customizing:
-   - Edit CSS files in `css/` folder for styling changes
-   - Modify `js/script.js` for functionality updates
-   - Add or replace images in the `images/` folder
+## Customization
+
+- Edit CSS files in `css/` for styling changes
+- Modify `js/script.js` for functionality updates
+- Add or replace images in the `images/` folder
 
 ## Project Structure
 
 ```
 hikari/
 ├── index.html
+├── README.md
 ├── css/               # Custom styles
-├── js/                # Custom scripts  
-└── images/            # Assets
+├── fonts/             # Local fonts
+├── images/            # Assets
+├── js/                # Custom scripts
+└── scss/              # Bootstrap SCSS source
 ```
 
 ## Features Overview
 
 - **Home Section**: Hero carousel featuring Tokyo, Kyoto, and Osaka
 - **Discover**: Introduction to Japanese culture and seasons
-- **Gallery**: Interactive image carousel with 9+ destination photos
+- **Gallery**: Interactive image carousel with 10 destination photos
 - **Explore Map**: Interactive Leaflet map of Japan with key destinations
 - **Travel Tips**: Cards covering language, transportation, and timing
 
@@ -80,4 +84,4 @@ hikari/
 
 ## License
 
-This project is licensed under the MIT License - see the `LICENSE` file for details.
+This project is licensed under the MIT License.
