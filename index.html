@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="css/custombootstrap.css">
   </head>
   <body>
+    <a class="skip-link" href="#home">Skip to main content</a>
     <!-- Loading Start -->
     <div class="">
         
@@ -46,9 +47,9 @@
     <!--Loading End -->
 
     <!-- Header -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" aria-label="Primary navigation">
       <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="#">
+        <a class="navbar-brand d-flex align-items-center" href="#home">
           <img src="images/icons/logo.svg" alt="Logo" width="30" height="30" class="d-inline-block align-text-top me-2">
           <p CLASS="logo-text" >HIKARI</p>
         </a>
@@ -58,7 +59,7 @@
         </button>
         <div class="offcanvas offcanvas-start w-100" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
           <div class="offcanvas-header">
-            <a class="navbar-brand d-flex align-items-center" href="#">
+            <a class="navbar-brand d-flex align-items-center" href="#home">
               <img src="images/icons/logo.svg" alt="Logo" width="30" height="30" class="d-inline-block align-text-top me-2">
               <p CLASS="logo-text" >HIKARI</p>
             </a>
@@ -66,7 +67,7 @@
           </div>
           <div class="offcanvas-body">
             <ul class="navbar-nav  mb-2 mb-lg-0">
-              <li data-bs-dismiss="offcanvas" class="nav-item "> <a class="nav-link active-link  text-center off-canvas-menu" aria-current="page" href="#"> Home</a></li>
+              <li data-bs-dismiss="offcanvas" class="nav-item "> <a class="nav-link active-link text-center off-canvas-menu" aria-current="page" href="#home"> Home</a></li>
               <li data-bs-dismiss="offcanvas" class="nav-item "><a class="nav-link text-center off-canvas-menu" href="#discover">Discover</a></li>
               <li data-bs-dismiss="offcanvas" class="nav-item "><a class="nav-link text-center off-canvas-menu" href="#gallery">Gallery</a></li>
               <li data-bs-dismiss="offcanvas" class="nav-item "><a class="nav-link text-center off-canvas-menu" href="#explore-map">Explore</a></li>
@@ -107,6 +108,7 @@
     </div>
 
     <!-- Banner Texts -->
+    <main>
     <section id="home" class="banner-txt-div">
       <p class="banner-welcome-txt">Welcome to</p>
       <h1 class="banner-place-txt" id="place">TOKYO</h1>
@@ -154,65 +156,113 @@
       <h1 class="discover-title-txt">Gallery</h1>
     </div>
 
-    <div id="gallerycarousel" class="carousel slide">
+    <div id="gallerycarouselDesktop" class="carousel slide d-none d-md-block">
       <div class="carousel-inner">
-        <div class="carousel-item ">
-          <div class="row">
-            <div class="col-4 gallery-image-container">
-              <img src="images/gallery/image1.avif" class="d-block w-100" alt="...">
-            </div>
-
-            <div class="col-4 gallery-image-container">
-              <img src="images/gallery/image2.avif" class="d-block w-100" alt="...">
-            </div>
-
-            <div class="col-4 gallery-image-container">
-              <img src="images/gallery/image3.avif" class="d-block w-100" alt="...">
-            </div>
-
-          </div>
-        </div>
-
-        <div class="carousel-item ">
-          <div class="row">
-            <div class="col-4 gallery-image-container">
-              <img src="images/gallery/image4.avif" class="d-block w-100" alt="...">
-            </div>
-
-            <div class="col-4 gallery-image-container">
-              <img src="images/gallery/image5.avif" class="d-block w-100" alt="...">
-            </div>
-
-            <div class="col-4 gallery-image-container">
-              <img src="images/gallery/image6.avif" class="d-block w-100" alt="...">
-            </div>
-
-          </div>
-        </div>
-
         <div class="carousel-item active">
           <div class="row">
             <div class="col-4 gallery-image-container">
-              <img src="images/gallery/image7.avif" class="d-block w-100" alt="...">
+              <img src="images/gallery/image1.avif" class="d-block w-100" alt="Tokyo city skyline at sunset" loading="lazy">
             </div>
-
             <div class="col-4 gallery-image-container">
-              <img src="images/gallery/image8.avif" class="d-block w-100" alt="...">
+              <img src="images/gallery/image2.avif" class="d-block w-100" alt="Traditional Japanese temple surrounded by trees" loading="lazy">
             </div>
-
-            <div class="col-4 gallery-image-container" >
-              <img src="images/gallery/image9.avif" class="d-block w-100" alt="...">
+            <div class="col-4 gallery-image-container">
+              <img src="images/gallery/image3.avif" class="d-block w-100" alt="Night view of Osaka streets and neon lights" loading="lazy">
             </div>
-
           </div>
         </div>
 
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-4 gallery-image-container">
+              <img src="images/gallery/image4.avif" class="d-block w-100" alt="Shinto shrine gate with mountain backdrop" loading="lazy">
+            </div>
+            <div class="col-4 gallery-image-container">
+              <img src="images/gallery/image5.avif" class="d-block w-100" alt="Autumn leaves in a Kyoto garden" loading="lazy">
+            </div>
+            <div class="col-4 gallery-image-container">
+              <img src="images/gallery/image6.avif" class="d-block w-100" alt="Street food stall in a busy market" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-4 gallery-image-container">
+              <img src="images/gallery/image7.avif" class="d-block w-100" alt="Mount Fuji with clear blue sky" loading="lazy">
+            </div>
+            <div class="col-4 gallery-image-container">
+              <img src="images/gallery/image8.avif" class="d-block w-100" alt="Japanese train passing through countryside" loading="lazy">
+            </div>
+            <div class="col-4 gallery-image-container">
+              <img src="images/gallery/image9.avif" class="d-block w-100" alt="Cherry blossoms beside a river in spring" loading="lazy">
+            </div>
+          </div>
+        </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#gallerycarousel" data-bs-slide="prev">
+      <button class="carousel-control-prev" type="button" data-bs-target="#gallerycarouselDesktop" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#gallerycarousel" data-bs-slide="next">
+      <button class="carousel-control-next" type="button" data-bs-target="#gallerycarouselDesktop" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <div id="gallerycarouselMobile" class="carousel slide d-md-none">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="gallery-image-container">
+            <img src="images/gallery/image1.avif" class="d-block w-100" alt="Tokyo city skyline at sunset" loading="lazy">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="gallery-image-container">
+            <img src="images/gallery/image2.avif" class="d-block w-100" alt="Traditional Japanese temple surrounded by trees" loading="lazy">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="gallery-image-container">
+            <img src="images/gallery/image3.avif" class="d-block w-100" alt="Night view of Osaka streets and neon lights" loading="lazy">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="gallery-image-container">
+            <img src="images/gallery/image4.avif" class="d-block w-100" alt="Shinto shrine gate with mountain backdrop" loading="lazy">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="gallery-image-container">
+            <img src="images/gallery/image5.avif" class="d-block w-100" alt="Autumn leaves in a Kyoto garden" loading="lazy">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="gallery-image-container">
+            <img src="images/gallery/image6.avif" class="d-block w-100" alt="Street food stall in a busy market" loading="lazy">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="gallery-image-container">
+            <img src="images/gallery/image7.avif" class="d-block w-100" alt="Mount Fuji with clear blue sky" loading="lazy">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="gallery-image-container">
+            <img src="images/gallery/image8.avif" class="d-block w-100" alt="Japanese train passing through countryside" loading="lazy">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="gallery-image-container">
+            <img src="images/gallery/image9.avif" class="d-block w-100" alt="Cherry blossoms beside a river in spring" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#gallerycarouselMobile" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#gallerycarouselMobile" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
@@ -308,6 +358,7 @@
         </div>
       </div>
     </footer>
+    </main>
 
   <!-- JavaScript Libraries -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"

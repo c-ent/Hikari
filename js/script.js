@@ -1,27 +1,47 @@
-// Loading area function
-document.onreadystatechange = function() {
-  if (document.readyState !== "complete") {
-      document.querySelector(
-        "body").style.visibility = "hidden";
-      document.querySelector(
-        "#loading").style.visibility = "visible";
-  } else {
-      document.querySelector(
-        "#loading").style.visibility = "hidden";
-      document.querySelector(
-        "body").style.visibility = "visible";
+function setLoadingState(isLoading) {
+  const loading = document.querySelector('#loading');
+  if (!loading) {
+    return;
   }
-};
 
-document.querySelectorAll('.nav-link').forEach(link => {
-  link.addEventListener('click', function() {
-      // Remove active-link class from all nav links
-      document.querySelectorAll('.nav-link').forEach(navLink => {
-          navLink.classList.remove('active-link');
-          navLink.classList.remove('active');
-      });
-      // Add active-link class to clicked link
-      this.classList.add('active-link');
+  document.body.style.visibility = isLoading ? 'hidden' : 'visible';
+  loading.style.visibility = isLoading ? 'visible' : 'hidden';
+}
+
+document.addEventListener('readystatechange', function () {
+  setLoadingState(document.readyState !== 'complete');
+});
+
+window.addEventListener('load', function () {
+  setLoadingState(false);
+});
+
+const navLinks = Array.from(document.querySelectorAll('.nav-link[href^="#"]'));
+
+function setActiveLink(activeLink) {
+  navLinks.forEach(function (link) {
+    const isActive = link === activeLink;
+    link.classList.toggle('active-link', isActive);
+    link.classList.toggle('active', isActive);
+    if (isActive) {
+      link.setAttribute('aria-current', 'page');
+    } else {
+      link.removeAttribute('aria-current');
+    }
+  });
+}
+
+navLinks.forEach(function (link) {
+  link.addEventListener('click', function () {
+    setActiveLink(link);
+
+    const offcanvasElement = document.getElementById('offcanvasNavbar');
+    if (offcanvasElement && window.bootstrap && window.bootstrap.Offcanvas) {
+      const offcanvasInstance = window.bootstrap.Offcanvas.getInstance(offcanvasElement);
+      if (offcanvasInstance) {
+        offcanvasInstance.hide();
+      }
+    }
   });
 });
 
@@ -45,6 +65,54 @@ switch (activeSlide) {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+  const sectionLinks = navLinks
+    .map(function (link) {
+      const href = link.getAttribute('href');
+      if (!href || href === '#') {
+        return null;
+      }
+
+      const section = document.querySelector(href);
+      return section ? { link, section } : null;
+    })
+    .filter(Boolean);
+
+  if (sectionLinks.length > 0) {
+    const observer = new IntersectionObserver(
+      function (entries) {
+        const visibleSections = entries
+          .filter(function (entry) {
+            return entry.isIntersecting;
+          })
+          .sort(function (a, b) {
+            return b.intersectionRatio - a.intersectionRatio;
+          });
+
+        if (visibleSections.length === 0) {
+          return;
+        }
+
+        const currentSection = visibleSections[0].target;
+        const match = sectionLinks.find(function (item) {
+          return item.section === currentSection;
+        });
+
+        if (match) {
+          setActiveLink(match.link);
+        }
+      },
+      {
+        root: null,
+        rootMargin: '-35% 0px -45% 0px',
+        threshold: [0.2, 0.4, 0.6]
+      }
+    );
+
+    sectionLinks.forEach(function (item) {
+      observer.observe(item.section);
+    });
+  }
+
   // Initialize the map
   if (document.getElementById('japan-map')) {
     try {

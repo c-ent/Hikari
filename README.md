@@ -54,6 +54,25 @@ start index.html
 - Modify `js/script.js` for functionality updates
 - Add or replace images in the `images/` folder
 
+## Troubleshooting
+
+- **Map is blank or tiles do not load**: Check your internet connection and confirm that Leaflet CDN and Carto tiles are not blocked by your network.
+- **Images are not showing**: Verify image paths under `images/` and keep file names/extensions exactly the same as referenced in `index.html`.
+- **Styles or scripts not applying**: Open browser DevTools and confirm `css/style.css` and `js/script.js` load with status 200.
+- **Layout looks wrong on mobile**: Clear browser cache and hard refresh to ensure updated CSS is loaded.
+- **Anchors scroll to wrong position**: If you change navbar height, update `scroll-padding-top` in `css/style.css`.
+
+## Contributing
+
+Contributions are welcome.
+
+1. Fork the repository.
+2. Create a feature branch: `git checkout -b feat/your-change`.
+3. Commit with a clear message.
+4. Push your branch and open a pull request.
+
+Please keep changes focused and include screenshots for UI updates when possible.
+
 ## Project Structure
 
 ```
@@ -84,4 +103,4 @@ hikari/
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](LICENSE).
