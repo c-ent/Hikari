@@ -1,15 +1,6 @@
 # Hikari 🏯
 
-A landing page showcasing the top places in Japan.
-
-## Features
-
-- **Interactive Map**: Leaflet-powered map to explore Japanese destinations
-- **Image Gallery**: Carousel gallery showcasing beautiful locations across Japan
-- **Responsive Design**: Fully responsive layout built with Bootstrap 5
-- **Travel Tips**: Essential guides for language, transportation, and best times to visit
-- **Smooth Navigation**: Fixed navigation with smooth scrolling to sections
-- **Loading Animation**: Custom loading screen for better UX
+A landing page showcasing Japan.
 
 ## Tech Stack
 
